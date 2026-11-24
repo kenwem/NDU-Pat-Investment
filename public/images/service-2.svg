@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" fill="#1c1917"/>
+  <circle cx="600" cy="400" r="310" fill="#84cc16" fill-opacity="0.08"/>
+  <!-- Luthier workbench & precision tuning fork + acoustic body -->
+  <rect x="180" y="540" width="840" height="36" rx="8" fill="#44403c"/>
+  <g transform="translate(360,160)">
+    <path d="M240 80 C160 80 110 140 125 210 C138 265 180 290 155 345 C128 405 165 495 260 495 C355 495 392 405 365 345 C340 290 382 265 395 210 C410 140 360 80 280 80 Z" fill="#92400e" stroke="#f59e0b" stroke-width="4"/>
+    <circle cx="260" cy="260" r="56" fill="#1c1917" stroke="#84cc16" stroke-width="5"/>
+    <circle cx="260" cy="260" r="22" stroke="#84cc16" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+  <!-- Tuning fork -->
+  <g transform="translate(810,200)" stroke="#84cc16" stroke-width="10" stroke-linecap="round">
+    <path d="M20 20 v130 c0 35 60 35 60 0 V20"/>
+    <line x1="50" y1="175" x2="50" y2="285"/>
+    <circle cx="50" cy="295" r="10" fill="#84cc16" stroke="none"/>
+  </g>
+</svg>

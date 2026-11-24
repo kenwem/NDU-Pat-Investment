@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <rect width="800" height="800" fill="#f5f5f4"/>
+  <circle cx="400" cy="400" r="280" fill="#ecfccb"/>
+  <circle cx="400" cy="400" r="220" stroke="#84cc16" stroke-width="2" stroke-dasharray="8 8" stroke-opacity="0.5"/>
+  <!-- Classical Acoustic Guitar + Studio Condenser Mic -->
+  <g transform="translate(250,110) rotate(12)">
+    <path d="M120 220 C65 220 35 265 45 315 C52 348 80 370 62 410 C40 455 68 545 145 545 C222 545 250 455 228 410 C210 370 238 348 245 315 C255 265 225 220 170 220 Z" fill="#92400e" stroke="#451a03" stroke-width="5"/>
+    <circle cx="145" cy="355" r="44" fill="#1c1917" stroke="#f59e0b" stroke-width="4"/>
+    <rect x="108" y="452" width="74" height="22" rx="4" fill="#1c1917"/>
+    <rect x="131" y="20" width="28" height="230" rx="4" fill="#451a03"/>
+    <rect x="122" y="-10" width="46" height="52" rx="8" fill="#1c1917"/>
+    <line x1="138" y1="20" x2="138" y2="452" stroke="#e7e5e4" stroke-width="1.5"/>
+    <line x1="145" y1="20" x2="145" y2="452" stroke="#e7e5e4" stroke-width="1.5"/>
+    <line x1="152" y1="20" x2="152" y2="452" stroke="#e7e5e4" stroke-width="1.5"/>
+  </g>
+  <!-- Condenser Mic -->
+  <g transform="translate(490,340)">
+    <rect x="28" y="130" width="12" height="190" rx="4" fill="#44403c"/>
+    <rect x="0" y="310" width="68" height="16" rx="8" fill="#1c1917"/>
+    <rect x="14" y="20" width="40" height="110" rx="20" fill="#1c1917" stroke="#84cc16" stroke-width="3"/>
+    <line x1="18" y1="45" x2="50" y2="45" stroke="#84cc16" stroke-width="2"/>
+    <line x1="18" y1="60" x2="50" y2="60" stroke="#84cc16" stroke-width="2"/>
+    <line x1="18" y1="75" x2="50" y2="75" stroke="#84cc16" stroke-width="2"/>
+  </g>
+</svg>

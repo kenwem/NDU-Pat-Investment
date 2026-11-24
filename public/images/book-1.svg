@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 840" fill="none">
+  <rect width="600" height="840" rx="24" fill="#1c1917"/>
+  <rect x="28" y="28" width="544" height="784" rx="16" stroke="#84cc16" stroke-width="3" stroke-opacity="0.6"/>
+  <circle cx="300" cy="340" r="125" fill="#292524" stroke="#84cc16" stroke-width="4"/>
+  <path d="M318 250v112a26 26 0 1 1-16-24V275l54-16v24l-38 11v-44z" fill="#84cc16"/>
+  <text x="300" y="540" text-anchor="middle" fill="#fafaf9" font-family="sans-serif" font-weight="800" font-size="34">INSTRUMENT CARE</text>
+  <text x="300" y="585" text-anchor="middle" fill="#a3e635" font-family="sans-serif" font-weight="700" font-size="22" letter-spacing="3">MASTER HANDBOOK</text>
+  <line x1="160" y1="635" x2="440" y2="635" stroke="#44403c" stroke-width="2"/>
+  <text x="300" y="690" text-anchor="middle" fill="#a8a29e" font-family="sans-serif" font-weight="600" font-size="20">Chief Patrick Ndu</text>
+  <text x="300" y="730" text-anchor="middle" fill="#78716c" font-family="sans-serif" font-size="16">NDU PAT INVESTMENT PRESS</text>
+</svg>

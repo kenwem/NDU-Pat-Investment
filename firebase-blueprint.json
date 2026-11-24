@@ -1,0 +1,246 @@
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global site configuration and visual identity for NDU PAT Investment",
+      "type": "object",
+      "properties": {
+        "siteName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "logoUrl": { "type": "string", "maxLength": 2000 },
+        "heroBgUrl": { "type": "string", "maxLength": 2000 },
+        "heroTitle": { "type": "string", "maxLength": 300 },
+        "heroSubtitle": { "type": "string", "maxLength": 600 },
+        "aboutBgUrl": { "type": "string", "maxLength": 2000 },
+        "aboutFacts": { "type": "array", "description": "Quick facts shown on the About page" },
+        "servicesBgUrl": { "type": "string", "maxLength": 2000 },
+        "blogBgUrl": { "type": "string", "maxLength": 2000 },
+        "ceoPhotoUrl": { "type": "string", "maxLength": 2000 },
+        "copyrightText": { "type": "string", "maxLength": 300 }
+      },
+      "required": ["siteName"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Musical instrument or studio equipment product item",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "category": { "type": "string", "maxLength": 120 },
+        "brand": { "type": "string", "maxLength": 120 },
+        "subCategory": { "type": "string", "maxLength": 120 },
+        "price": { "type": "string", "maxLength": 60 },
+        "salePrice": { "type": "string", "maxLength": 60 },
+        "stock": { "type": "number" },
+        "imageUrl": { "type": "string", "maxLength": 2000 },
+        "shortDescription": { "type": "string", "maxLength": 2000 },
+        "position": { "type": "number" },
+        "variations": { "type": "array", "description": "Optional product variations with name, price, salePrice" }
+      },
+      "required": ["name", "shortDescription", "position"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Musical instrument service, repair, rental, or acoustic consulting offering",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "description": { "type": "string", "minLength": 1, "maxLength": 3000 },
+        "icon": { "type": "string", "maxLength": 60 },
+        "image": { "type": "string", "maxLength": 2000 },
+        "features": { "type": "array" },
+        "position": { "type": "number" }
+      },
+      "required": ["title", "description", "icon", "position"]
+    },
+    "Book": {
+      "title": "Book",
+      "description": "Published music manual, instrument care guide, or research publication",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 250 },
+        "author": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "price": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "status": { "type": "string", "enum": ["Draft", "Published"] },
+        "coverImage": { "type": "string", "maxLength": 2000 },
+        "preface": { "type": "string", "maxLength": 10000 },
+        "position": { "type": "number" }
+      },
+      "required": ["title", "author", "price", "status", "position"]
+    },
+    "EditorialArticle": {
+      "title": "EditorialArticle",
+      "description": "Editorial article on musical instruments, acoustics, and studio craftsmanship",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 250 },
+        "slug": { "type": "string", "minLength": 1, "maxLength": 250, "pattern": "^[a-z0-9-]+$" },
+        "excerpt": { "type": "string", "maxLength": 1000 },
+        "content": { "type": "string", "maxLength": 100000 },
+        "category": { "type": "string", "maxLength": 120 },
+        "author": { "type": "string", "maxLength": 120 },
+        "date": { "type": "string", "maxLength": 30 },
+        "image": { "type": "string", "maxLength": 2000 },
+        "status": { "type": "string", "enum": ["Draft", "Published"] },
+        "featured": { "type": "boolean" },
+        "metaTitle": { "type": "string", "maxLength": 200 },
+        "metaDescription": { "type": "string", "maxLength": 500 },
+        "focusKeywords": { "type": "string", "maxLength": 300 },
+        "position": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "slug", "status", "category", "date", "position"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Customer, musician, or studio partner testimonial",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "maxLength": 4000 },
+        "author": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "location": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "position": { "type": "number" }
+      },
+      "required": ["text", "author", "location", "position"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Service booking or studio consultation request",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "email": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "phone": { "type": "string", "minLength": 5, "maxLength": 40 },
+        "service": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "date": { "type": "string", "minLength": 6, "maxLength": 30 },
+        "time": { "type": "string", "minLength": 3, "maxLength": 30 },
+        "message": { "type": "string", "maxLength": 2000 },
+        "status": { "type": "string", "enum": ["Pending", "Confirmed", "Completed", "Cancelled"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "phone", "service", "date", "time", "status", "createdAt"]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Contact inquiry submitted from the public Contact page",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "email": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "subject": { "type": "string", "minLength": 1, "maxLength": 250 },
+        "message": { "type": "string", "minLength": 1, "maxLength": 5000 },
+        "status": { "type": "string", "enum": ["Unread", "Read"] },
+        "date": { "type": "string", "maxLength": 40 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "subject", "message", "status", "date", "createdAt"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer instrument order tracked in Admin Portal",
+      "type": "object",
+      "properties": {
+        "orderId": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "product": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "total": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "status": { "type": "string", "enum": ["Processing", "Shipped", "Delivered"] },
+        "date": { "type": "string", "minLength": 6, "maxLength": 30 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["orderId", "name", "product", "total", "status", "date"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Moderated user comment or reply on editorial, products, or services",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "userEmail": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "userName": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "userPhoto": { "type": "string", "maxLength": 2000 },
+        "text": { "type": "string", "minLength": 1, "maxLength": 3000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["pending", "approved"] }
+      },
+      "required": ["userId", "userEmail", "userName", "text", "createdAt", "status"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated user profile record",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "email": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "role": { "type": "string", "enum": ["admin", "client"] },
+        "displayName": { "type": "string", "maxLength": 150 }
+      },
+      "required": ["uid", "email", "role"]
+    }
+  },
+  "firestore": {
+    "/sites/{siteId}/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/SiteSettings" },
+      "description": "Global site visual settings and branding configuration"
+    },
+    "/sites/{siteId}/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Musical instruments and accessories catalog"
+    },
+    "/sites/{siteId}/services/{serviceId}": {
+      "schema": { "$ref": "#/entities/Service" },
+      "description": "Instrument services, repairs, studio setup, and training"
+    },
+    "/sites/{siteId}/books/{bookId}": {
+      "schema": { "$ref": "#/entities/Book" },
+      "description": "Music handbooks, manuals, and research publications"
+    },
+    "/sites/{siteId}/editorial/{articleId}": {
+      "schema": { "$ref": "#/entities/EditorialArticle" },
+      "description": "Editorial articles and educational music posts"
+    },
+    "/sites/{siteId}/testimonials/{testimonialId}": {
+      "schema": { "$ref": "#/entities/Testimonial" },
+      "description": "Musician, church, and studio partner testimonials"
+    },
+    "/sites/{siteId}/appointments/{appointmentId}": {
+      "schema": { "$ref": "#/entities/Appointment" },
+      "description": "Private service booking and consultation requests"
+    },
+    "/sites/{siteId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/ContactMessage" },
+      "description": "Private contact inquiries from website visitors"
+    },
+    "/sites/{siteId}/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/Order" },
+      "description": "Private instrument orders managed by administrators"
+    },
+    "/sites/{siteId}/editorial/{articleId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Moderated comments on editorial articles"
+    },
+    "/sites/{siteId}/editorial/{articleId}/comments/{commentId}/replies/{replyId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Moderated nested replies to editorial comments"
+    },
+    "/sites/{siteId}/products/{productId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Moderated comments on products"
+    },
+    "/sites/{siteId}/products/{productId}/comments/{commentId}/replies/{replyId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Moderated replies on product comments"
+    },
+    "/sites/{siteId}/services/{serviceId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Moderated comments on services"
+    },
+    "/sites/{siteId}/services/{serviceId}/comments/{commentId}/replies/{replyId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Moderated replies on service comments"
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile and role document"
+    }
+  }
+}

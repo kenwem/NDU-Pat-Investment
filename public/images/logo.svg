@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="100" fill="#1c1917"/>
+  <circle cx="100" cy="100" r="88" stroke="#84cc16" stroke-width="3" stroke-opacity="0.35"/>
+  <circle cx="100" cy="100" r="74" stroke="#84cc16" stroke-width="1.5" stroke-dasharray="6 6" stroke-opacity="0.5"/>
+  <path d="M44 108c10-28 20-28 30 0s20 28 30 0 20-28 30 0 18 16 22 0" stroke="#65a30d" stroke-width="5" stroke-linecap="round" stroke-opacity="0.45"/>
+  <path d="M112 46v74.5c0 11.32-9.18 20.5-20.5 20.5S71 131.82 71 120.5 80.18 100 91.5 100c3.2 0 6.23.73 8.93 2.04V58l42-12v18l-30.43 8.7V46z" fill="#84cc16"/>
+  <circle cx="91.5" cy="120.5" r="8.5" fill="#1c1917"/>
+  <text x="100" y="168" text-anchor="middle" fill="#f5f5f4" font-family="sans-serif" font-weight="800" font-size="18" letter-spacing="2">NDU PAT</text>
+</svg>

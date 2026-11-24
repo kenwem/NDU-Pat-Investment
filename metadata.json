@@ -1,0 +1,6 @@
+{
+  "name": "NDU PAT Investment",
+  "description": "NDU PAT Investment — Premier Musical Instruments, Pro Audio Gear, Instrument Craftsmanship, Repairs & Music Publications since 1993.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
